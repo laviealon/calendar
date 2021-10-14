@@ -25,6 +25,6 @@ public class Project {
 
     public double calculateMinHours() {
         long diff = ChronoUnit.DAYS.between(this.startDate, this.dueDate);
-        return this.totalHours/(diff*this.frequency);
+        return this.totalHours/diff;
     }
 }
