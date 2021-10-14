@@ -14,11 +14,8 @@ public class Week {
         days = new Day[7];
         // set each element of <days> to its corresponding day, starting with days[0] = new Day(startDate, startDay).
         for(int i = 0; i <= 6; i++){
-            days[i] = new Day(startDate.plusDays(i), startDay.plus(i));
+            days[i] = new Day(startDate.plusDays(i));
         }
     }
 
-    public void putTask(Task task){
-        // loop through half-hours and put them into the correct day using Day.putHalfHourTask.
-    }
 }

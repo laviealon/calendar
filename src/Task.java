@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 
 public class Task {
     public String name;
-    public LocalDateTime startTime;
+    public double startTime;
     public double duration;
     public boolean completed;
 
@@ -15,7 +15,7 @@ public class Task {
     public Task(String name, double duration){
         this.name = name;
         this.duration = duration;
-        this.startTime = LocalDateTime.of(0, 0, 0, 0, 0, 0);
+        this.startTime = 0.0;
         completed = false;
     }
 
@@ -26,7 +26,7 @@ public class Task {
      * @param startTime: start date and time of this task
      * @param duration: duration of this task
      */
-    public Task(String name, LocalDateTime startTime, double duration){
+    public Task(String name, double startTime, double duration){
         this.name = name;
         this.duration = duration;
         this.startTime = startTime;
