@@ -9,7 +9,7 @@ public class UserInterface {
      * If the user inputs 1, program creates a week calendar.
      * If the user inputs 2, program imports a week calendar.
      */
-    public int createOrImportWeek(){
+    public static int createOrImportWeek(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         // Give background for the app and instructions for the user
         System.out.println("Hi there! Welcome to RoutOp, the app built for optimizing your week.");
