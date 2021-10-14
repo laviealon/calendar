@@ -6,14 +6,33 @@ import java.util.List;
 // comment
 public class Project {
 
-    public double calculateMinHours(LocalDate startDate, LocalDate dueDate, double totalHours, double frequency) {
+    /**
+     *
+     * @param week
+     * @param startDate
+     * @param dueDate
+     * @param totalHours
+     * @param frequency
+     * @return the minimum number of hours user must work on project per frequency to complete it in time. If
+     *  there is not enough space in their week, return 0.0.
+     */
+    public static double calculateMinHours(Week week, LocalDate startDate, LocalDate dueDate, double totalHours, double frequency) {
+        double idealChunk = getIdealChunk(startDate, dueDate, totalHours, frequency);
+        boolean fitSchedule = fitSchedule(week, idealChunk);
+        if (fitSchedule) {
+            return idealChunk;
+        }
+        return 0.0;
+    }
+
+    public static double getIdealChunk(LocalDate startDate, LocalDate dueDate, double totalHours, double frequency){
         long diff = ChronoUnit.DAYS.between(startDate, dueDate);
         double slots = diff*(frequency/7);
         double idealChunk = totalHours/slots;
         return Math.max(idealChunk, 0.5);
     }
 
-    public boolean fitSchedule(Week week, double idealChunk){
+    public static boolean fitSchedule(Week week, double idealChunk){
         for(Day n: week.days){
             double maxDay = calculateMaxHoursDay(n);
             if (maxDay < idealChunk) {
@@ -24,7 +43,7 @@ public class Project {
     //Should this method be in class week?
     //Not sure if it should return the max hour (chunk) of the week (Mon:3hrs, Tue-Fri:2hrs, return 3) or return the
     //max hours that can fit into each day (Mon:3hrs, Tue-Fri:2hrs, return 2).
-    public double calculateMaxHoursWeek(Week week) {
+    public static double calculateMaxHoursWeek(Week week) {
         double maxHour = 0.0d;
         for(Day n: week.days){
             double maxDay = calculateMaxHoursDay(n);
@@ -34,7 +53,7 @@ public class Project {
 
     //Should the method be in class Day?
     //Not sure about how abstract class works sorry.
-    public double calculateMaxHoursDay (Day day){
+    public static double calculateMaxHoursDay (Day day){
         double maxHour = 0.0d;
         List<Double> startTime = new ArrayList<>(day.todaySchedule.keySet());
         for(int i = 0; i < startTime.size(); i++){
