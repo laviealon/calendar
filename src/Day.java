@@ -18,4 +18,5 @@ public class Day {
         this.todaySchedule = new HashMap<Double, String>();
     }
 
+    // TODO: account for free time before first task and after last task.
 }
