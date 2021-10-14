@@ -24,13 +24,13 @@ public class UserInterface {
         return Integer.parseInt(selectedOption);
     }
 
-    public LocalDate getWeek(){
+    public LocalDate getStartDay(){
         Scanner reader = new Scanner(System.in);
-        System.out.println("On which day do you want your week to start at?");
+        System.out.println("On which day do you want your week to start?");
         System.out.println();
         System.out.println("(Please enter date in format YYYY-MM-DD)");
-        String week = reader.nextLine();
-        return new LocalDate.parseInt(week);
+        String startDay = reader.nextLine();
+        return new LocalDate.parseInt(startDay);
     }
 
 }
