@@ -9,6 +9,8 @@ public class UserInterface {
      * gives user the option to either create or import their week calendar.
      * If the user inputs 1, program creates a week calendar.
      * If the user inputs 2, program imports a week calendar.
+     *
+     * @return their selected option as an integer.
      */
     public static int createOrImportWeek(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
@@ -24,13 +26,24 @@ public class UserInterface {
         return Integer.parseInt(selectedOption);
     }
 
-    public LocalDate getStartDay(){
-        Scanner reader = new Scanner(System.in);
+    /**
+     * Assuming user starts a new week, ask the user to choose on which date
+     * they want their week to start.
+     *
+     * @return the date they input as a LocalDate object.
+     */
+    public LocalDate getStartDate(){
+        Scanner reader = new Scanner(System.in);  // Create a Scanner object
+        // Give user instructions
         System.out.println("On which day do you want your week to start?");
         System.out.println();
         System.out.println("(Please enter date in format YYYY-MM-DD)");
-        String startDay = reader.nextLine();
-        return new LocalDate.parseInt(startDay);
+        String startDate = reader.nextLine();
+        int year = Integer.parseInt(startDate.substring(0, 4));
+        int month = Integer.parseInt(startDate.substring(5, 7));
+        int day = Integer.parseInt(startDate.substring(8, 10));
+        return LocalDate.of(year, month, day);
     }
 
 }
+
