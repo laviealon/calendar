@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,7 @@ public class Project {
      * @return the minimum number of hours user must work on project per frequency to complete it in time. If
      *  there is not enough space in their week, return 0.0.
      */
-    public static double calculateMinHours(Week week, LocalDate startDate, LocalDate dueDate, double totalHours, double frequency) {
+    public static double calculateMinHours(Week week, LocalDate startDate, LocalDateTime dueDate, double totalHours, double frequency) {
         double idealChunk = getIdealChunk(startDate, dueDate, totalHours, frequency);
         boolean fitSchedule = fitSchedule(week, idealChunk);
         if (fitSchedule) {
@@ -25,7 +26,7 @@ public class Project {
         return 0.0;
     }
 
-    public static double getIdealChunk(LocalDate startDate, LocalDate dueDate, double totalHours, double frequency){
+    public static double getIdealChunk(LocalDate startDate, LocalDateTime dueDate, double totalHours, double frequency){
         long diff = ChronoUnit.DAYS.between(startDate, dueDate);
         double slots = diff*(frequency/7);
         double idealChunk = totalHours/slots;
