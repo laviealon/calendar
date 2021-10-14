@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -22,4 +23,14 @@ public class UserInterface {
         String selectedOption = reader.nextLine();  // Read user input
         return Integer.parseInt(selectedOption);
     }
+
+    public LocalDate getWeek(){
+        Scanner reader = new Scanner(System.in);
+        System.out.println("On which day do you want your week to start at?");
+        System.out.println();
+        System.out.println("(Please enter date in format YYYY-MM-DD)");
+        String week = reader.nextLine();
+        return new LocalDate.parseInt(week);
+    }
+
 }
