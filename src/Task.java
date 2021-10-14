@@ -1,9 +1,10 @@
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Task {
     public String name;
-    public double startTime;
-    public double duration;
+    public LocalDateTime startDateTime;
+    public LocalTime duration;
     public boolean completed;
 
     /**
@@ -12,10 +13,10 @@ public class Task {
      * @param name: name of this task
      * @param duration: duration of this task
      */
-    public Task(String name, double duration){
+    public Task(String name, LocalTime duration){
         this.name = name;
         this.duration = duration;
-        this.startTime = 0.0;
+        this.startDateTime = LocalDateTime.of(0, 0, 0, 0, 0);
         completed = false;
     }
 
@@ -26,10 +27,10 @@ public class Task {
      * @param startTime: start date and time of this task
      * @param duration: duration of this task
      */
-    public Task(String name, double startTime, double duration){
+    public Task(String name, LocalDateTime startTime, LocalTime duration){
         this.name = name;
         this.duration = duration;
-        this.startTime = startTime;
+        this.startDateTime = startTime;
         completed = false;
     }
 
