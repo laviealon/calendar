@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Objects;
 
 public class Scheduler {
 
@@ -6,6 +8,7 @@ public class Scheduler {
     public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
         // algorithm to find best time slot in this week
         boolean scheduled = false;
+
         for(Day day: week.days){
 
         }

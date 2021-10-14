@@ -1,5 +1,6 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.time.LocalTime;
@@ -13,8 +14,7 @@ public class Day {
     public LocalDate dayOfMonth;
     public DayOfWeek dayOfWeek;
     public Map<Double, String> todaySchedule;
-    public LocalTime wakeTime;
-    public LocalTime sleepTime;
+
 
     public Day(LocalDate dayOfMonth){
         this.dayOfMonth = dayOfMonth;
@@ -27,13 +27,6 @@ public class Day {
         }
     }
 
-    public void setSleepTime(LocalTime sleepTime) {
-        this.sleepTime = sleepTime;
-    }
-
-    public void setWakeTime(LocalTime wakeTime) {
-        this.wakeTime = wakeTime;
-    }
 
     // TODO: account for free time before first task and after last task.
 }
