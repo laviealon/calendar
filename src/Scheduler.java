@@ -5,6 +5,10 @@ public class Scheduler {
     // TODO: REQUIRED FOR WALKTHROUGH.
     public NonFixedTask ScheduleTaskInWeek(Week week, Task task){
         // algorithm to find best time slot in this week
+        boolean scheduled = false;
+        for(Day day: week.days){
+
+        }
         return null;
     }
 
