@@ -1,7 +1,7 @@
 public class Putter {
 
     // TODO: REQUIRED FOR WALKTHROUGH - DO NOT NEED TO HANDLE CASE WHERE TASK OVERLAPS DAY.
-    public static void putTask(Task task){
+    public static void putTask(Week week, Task task){
         // loop through half-hours and put them into the correct day using Day.putHalfHourTask.
     }
 
@@ -16,7 +16,7 @@ public class Putter {
      * @param startHour: the half-hour that marks the beginning of this hour of a task.
      *                 Must be between 0 and 23.5.
      */
-    protected void putHalfHourTask(Day day, Double startHour, String taskName){
+    protected void putHalfHourTask(Week week, Day day, Double startHour, String taskName){
         day.todaySchedule.put(startHour, taskName);
     }
 

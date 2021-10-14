@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Scheduler {
 
     // TODO: REQUIRED FOR WALKTHROUGH.
-    public NonFixedTask ScheduleTaskInWeek(Week week, Task task){
+    public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
         // algorithm to find best time slot in this week
         boolean scheduled = false;
         for(Day day: week.days){
@@ -13,8 +13,12 @@ public class Scheduler {
     }
 
     // TODO: REQUIRED FOR WALKTHROUGH.
-    public NonFixedTask ScheduleTaskInFreq(double Frequency, Task task){
+    public static NonFixedTask ScheduleTaskInFreq(Week week, double frequency, Task task){
         // algorithm to find best time slot in this day, to be used by ScheduleProject
+        return null;
+    }
+
+    public static NonFixedTask[] ScheduleProject(Week week, double frequency, NonFixedTask[] projectTasks){
         return null;
     }
 

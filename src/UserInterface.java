@@ -34,7 +34,7 @@ public class UserInterface {
      *
      * @return the date they input as a LocalDate object.
      */
-    public LocalDate getStartDate(){
+    public static LocalDate getStartDate(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         // Give user instructions
         System.out.println("On which day do you want your week to start?");
@@ -57,7 +57,7 @@ public class UserInterface {
      *
      * @return user's selected option as an integer.
      */
-    public int scheduleDuty(){
+    public static int scheduleDuty(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         // Give user instructions
         System.out.println("You are now able to schedule your duties. Enter:");
@@ -76,7 +76,7 @@ public class UserInterface {
      *
      * @return the FixedTask that is to be put in the schedule.
      */
-    public FixedTask createFixedTask(){
+    public static FixedTask createFixedTask(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         System.out.println("What is the name of your task or event?");
         String name = reader.nextLine(); // Get user input
@@ -110,7 +110,7 @@ public class UserInterface {
      *
      * @return the NonFixedTask that is to be put in the schedule.
      */
-    public NonFixedTask createNonFixedTask(){
+    public static NonFixedTask createNonFixedTask(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         System.out.println("What is the name of your task or event?");
         String name = reader.nextLine(); // Get user input
@@ -149,7 +149,7 @@ public class UserInterface {
      *
      * @return an array of unscheduled NonFixedTasks corresponding to this project.
      */
-    public NonFixedTask[] createProject(Week week){
+    public static NonFixedTask[] createProject(Week week){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         System.out.println("What is the name of your project or goal?");
         String name = reader.nextLine(); // Get user input
