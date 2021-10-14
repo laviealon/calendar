@@ -7,10 +7,10 @@ public class UserInterface {
     /**
      * Starts the calendar program. Prints a blurb regarding how to program works, and then
      * gives user the option to either create or import their week calendar.
-     * If the user inputs 1, program creates a week calendar.
-     * If the user inputs 2, program imports a week calendar.
+     *  - If the user inputs 1, program creates a week calendar.
+     *  - If the user inputs 2, program imports a week calendar.
      *
-     * @return their selected option as an integer.
+     * @return user's selected option as an integer.
      */
     public static int createOrImportWeek(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
@@ -47,5 +47,26 @@ public class UserInterface {
         return LocalDate.of(year, month, day);
     }
 
+    /**
+     * Give the user the option of scheduling a type of duty.
+     *  - If the user inputs 1, program schedules a FixedTask.
+     *  - If the user inputs 2, program schedules a NonFixedTask.
+     *  - If the user inputs 3, program schedules a project.
+     *
+     * @return user's selected option as an integer.
+     */
+    public int scheduleDuty(){
+        Scanner reader = new Scanner(System.in);  // Create a Scanner object
+        // Give user instructions
+        System.out.println("You are now able to schedule your duties. Enter:");
+        System.out.println("    - 1 to schedule a task or event that is part of your week's fixed schedule");
+        System.out.println("    - 2 to schedule a task or event that is flexible, which RoutOp will find the best" +
+                "time slot for based on your fixed schedule.");
+        System.out.println("    - 3 to enter information about a project or goal you are working towards, which" +
+                "RoutOp will find time during the week for you to work on based on your fixed schedule as well" +
+                "as the information you enter about the project.");
+        String selectedOption = reader.nextLine(); // Get user input
+        return Integer.parseInt(selectedOption);
+    }
 }
 
