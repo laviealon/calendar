@@ -38,7 +38,9 @@ public class UserInterface {
         System.out.println("On which day do you want your week to start?");
         System.out.println();
         System.out.println("(Please enter date in format YYYY-MM-DD)");
+        // Gets user input
         String startDate = reader.nextLine();
+        // Reads user input and converts it to a LocalDate object
         int year = Integer.parseInt(startDate.substring(0, 4));
         int month = Integer.parseInt(startDate.substring(5, 7));
         int day = Integer.parseInt(startDate.substring(8, 10));
