@@ -72,9 +72,11 @@ public class UserInterface {
     }
 
     /**
-     * Get info from user about the fixed task that they want to schedule.
+     * Get info from user about the FixedTask that they want to schedule and return the Task.
+     *
+     * @return the FixedTask that is to be put in the schedule.
      */
-    public void scheduleFixedTask(){
+    public FixedTask createFixedTask(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         System.out.println("What is the name of your task or event?");
         String name = reader.nextLine(); // Get user input
@@ -96,13 +98,60 @@ public class UserInterface {
         System.out.println("(Please enter the duration of this task or event in the format HH:MM, HH ranges from 00 to" +
                 " 23 and where MM is either 00 or 30");
         String durationStr = reader.nextLine();  // Get user input
-        int hourDuration = Integer.parseInt(startTime.substring(0, 2));
-        int minuteDuration = Integer.parseInt(startTime.substring(3, 5));
+        int hourDuration = Integer.parseInt(durationStr.substring(0, 2));
+        int minuteDuration = Integer.parseInt(durationStr.substring(3, 5));
         LocalTime duration = LocalTime.of(hourDuration, minuteDuration);
-        FixedTask newTask = new FixedTask(name, startDateTime, duration); // Create a FixedTask from this information
+        return new FixedTask(name, startDateTime, duration);  // Create a FixedTask from this information
     }
 
-    public void scheduleNonFixedTask(){}
-    public void scheduleProject(){}
+
+    /**
+     * Get info from user about the NonFixedTask that they want to schedule and return the Task.
+     *
+     * @return the NonFixedTask that is to be put in the schedule.
+     */
+    public NonFixedTask createNonFixedTask(){
+        Scanner reader = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("What is the name of your task or event?");
+        String name = reader.nextLine(); // Get user input
+        System.out.println("(Please enter the duration of this task or event in the format HH:MM, HH ranges from 00 to" +
+                " 23 and where MM is either 00 or 30");
+        String durationStr = reader.nextLine();  // Get user input
+        int hourDuration = Integer.parseInt(durationStr.substring(0, 2));
+        int minuteDuration = Integer.parseInt(durationStr.substring(3, 5));
+        LocalTime duration = LocalTime.of(hourDuration, minuteDuration);
+
+        System.out.println("Please enter the date that this task or event is due before.");
+        System.out.println();
+        System.out.println("(Please enter date in format YYYY-MM-DD)");
+
+        String startDate = reader.nextLine(); // Get user input
+        int year = Integer.parseInt(startDate.substring(0, 4));
+        int month = Integer.parseInt(startDate.substring(5, 7));
+        int day = Integer.parseInt(startDate.substring(8, 10));
+
+        System.out.println("At what time on that day is your task or event due before?");
+        System.out.println();
+        System.out.println("(Please enter time in format HH:MM, where HH ranges from 00 to 23 and" +
+                " where MM is either 00 or 30)");
+
+        String startTime = reader.nextLine();  // Get user input
+        int hour = Integer.parseInt(startTime.substring(0, 2));
+        int minute = Integer.parseInt(startTime.substring(3, 5));
+
+        LocalDateTime dueDateTime = LocalDateTime.of(year, month, day, hour, minute);
+        return new NonFixedTask(name, duration, dueDateTime);
+    }
+
+    /**
+     * Get info from user about the project they want to schedule, and return an array of NonFixedTasks
+     * corresponding to the project.
+     *
+     * @return an array of unscheduled NonFixedTasks corresponding to this project.
+     */
+    public NonFixedTask[] createProject(){
+
+    }
 }
+
 
