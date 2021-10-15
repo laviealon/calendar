@@ -26,8 +26,7 @@ public class Controller {
             Putter.putTask(week, taskToPut);
         } else if (selection == 3) {
             NonFixedTask[] projectTasksToSchedule = UserInterface.createProject(week);
-            NonFixedTask[] projectTasksToPut = Scheduler.ScheduleProject(week, Constants.FREQUENCY,
-                    projectTasksToSchedule);
+            NonFixedTask[] projectTasksToPut = Scheduler.ScheduleProject(week, projectTasksToSchedule);
             Putter.putProject(projectTasksToPut[0].name, week, projectTasksToPut);
         } else {
             System.out.println("Please enter a valid option (1, 2, or 3).");
