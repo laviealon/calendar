@@ -9,10 +9,10 @@ public class Project {
 
     /**
      *
-     *  week
-     * startDate
-     * dueDate
-     * totalHours
+     * @param week: the week the project is going to be scheduled in
+     * @param startDate:
+     * @param dueDate:
+     * @param totalHours:
      * frequency
      * the minimum number of hours user must work on project per frequency to complete it in time. If
      *  there is not enough space in their week, return 0.0.

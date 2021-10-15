@@ -34,6 +34,22 @@ public class Task {
         completed = false;
     }
 
+    public double convertDurationDouble(){
+        double h = this.duration.getHour();
+        double m = (double)(this.duration.getMinute())/60;
+        double durationD = h + m;
+        return durationD;
+    }
+
+    public double convertDurationLocalTime(){
+        double h = this.duration.getHour();
+        double m = (double)(this.duration.getMinute())/60;
+        double durationD = h + m;
+        return durationD;
+    }
+
+
+
     /**
      * Completes this task.
      */
