@@ -7,8 +7,6 @@ import java.util.List;
 
 public class Scheduler {
 
-
-
     /**
      * Take a NonFixedTask and find the best (first available) time slot for it in the week.
      * Set that task's start time and duration to this best time slot and return it.
@@ -19,15 +17,14 @@ public class Scheduler {
      * @return the task with its updated time slot.
      */
     // TODO: implement this method.
-    //public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
-        // algorithm to find best time slot in this week
-        //boolean scheduled = false;
+    public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
+//         algorithm to find best time slot in this week
+        boolean scheduled = false;
 
-        //for(Day day: week.days){
-
-        //}
-        //return null;
-    //}
+//        for(Day day: week.days){
+//        }
+        return null;
+    }
 
     /**
      * Take a NonFixedTask and find the best (first available) time slot for it in a day.
@@ -39,31 +36,31 @@ public class Scheduler {
      */
     // TODO: implement this method.
 
-
-    //public static Task ScheduleTaskInDay(Day day, Task task){
-        // algorithm to find best time slot in this day, to be used by ScheduleProject
-        //List<Double> time = new ArrayList<Double>();
-        //double freeDuration = 0.0;
-        /**for (double key : day.todaySchedule.keySet()) {
-            String value = day.todaySchedule.get(key);
-            if (value.equals("")){freeDuration += 0.5;
-            if (freeDuration == task.duration)
-            {
-                double startTime = key + 0.5 - task.duration;
-                String startTimeString = Double.toString(startTime);
-                int hourStart = Integer.parseInt(startTimeString.substring(0, 2));
-                int minuteStart = Integer.parseInt(startTimeString.substring(3, 5));
-                LocalTime start = LocalTime.of(hourStart, minuteStart);
-                task.startDateTime = LocalDateTime.of(day.dayOfMonth, start);
-            }}
-            else{freeDuration = 0.0;}}
-        return task;
-        }
+//
+//    public static Task ScheduleTaskInDay(Day day, Task task){
+////         algorithm to find best time slot in this day, to be used by ScheduleProject
+//        List<Double> time = new ArrayList<Double>();
+//        double freeDuration = 0.0;
+//        for (double key : day.todaySchedule.keySet()) {
+//            String value = day.todaySchedule.get(key);
+//            if (value.equals("")){freeDuration += 0.5;
+//            if (freeDuration == task.duration)
+//            {
+//                double startTime = key + 0.5 - task.duration;
+//                String startTimeString = Double.toString(startTime);
+//                int hourStart = Integer.parseInt(startTimeString.substring(0, 2));
+//                int minuteStart = Integer.parseInt(startTimeString.substring(3, 5));
+//                LocalTime start = LocalTime.of(hourStart, minuteStart);
+//                task.startDateTime = LocalDateTime.of(day.dayOfMonth, start);
+//            }}
+//            else{freeDuration = 0.0;}}
+//        return task;
+//        }
 
 
         /**
-         * Take an array of NonFixedTasks and find the best (first available) time slot for each one in the given
-         * frequency, which is in times per week (FOR PHASE 0, ASSUME THIS IS 7).
+         * Take an array of NonFixedTasks with placeholder time slots and find the best (first available)
+         * time slot for each one in the given frequency, which is in times per week (FOR PHASE 0, ASSUME THIS IS 7).
          * Set each of these task's start time and duration to this best time slot and return the same array with
          * all the updated tasks.
          *
