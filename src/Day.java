@@ -28,5 +28,4 @@ public class Day {
     }
 
 
-    // TODO: account for free time before first task and after last task.
 }
