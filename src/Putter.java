@@ -1,8 +1,19 @@
+import java.time.LocalDateTime;
+
 public class Putter {
 
     // TODO: REQUIRED FOR WALKTHROUGH - DO NOT NEED TO HANDLE CASE WHERE TASK OVERLAPS DAY.
     public static void putTask(Week week, Task task){
         // loop through half-hours and put them into the correct day using Day.putHalfHourTask.
+        LocalDateTime taskStart = task.startDateTime;
+        for (Day day: week.days) {
+            // find the day this task starts in this week
+            if (taskStart.toLocalDate().isEqual(day.dayOfMonth)) {
+                // find the start time of the task in the day
+
+            }
+
+        }
     }
 
 
@@ -21,5 +32,7 @@ public class Putter {
     }
 
     // TODO: REQUIRED FOR WALKTHROUGH.
-    public static void putProject(String projectName, Week week, NonFixedTask[] tasks){}
+    public static void putProject(String projectName, Week week, NonFixedTask[] tasks){
+
+    }
 }

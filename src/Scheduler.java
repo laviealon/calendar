@@ -35,9 +35,24 @@ public class Scheduler {
      * @return the task with its updated time slot.
      */
     // TODO: implement this method.
+    // before we start this method, we know:
+    // - duration
+    // - dueDate
+    // - todaySchedule
     public static NonFixedTask ScheduleTaskInDay(Week week, Task task){
-        // algorithm to find best time slot in this day, to be used by ScheduleProject
+        // find earliest available time in day for this task:
+        // - create empty list
+        // - iterate through todaySchedule and add all times (keys) with value '' to list
+        // i = 0
+        // try and schedule task in this slot:
+        // - check for length of time in a row, by seeing if two adjacent list items are 0.5 hrs apart
+        // while list[i+1] - list[i] = 0.5:
+        // - once have length of free time (=window), check if window >= duration
+        //  - if true, assign start of window as startTime
+        //  - if false, get rid of record of this window and go back to iterating through list
+        //      i += all the indexes we've already seen
         return null;
+        // mutate task object so that startTime and duration now echo where we want to schedule this task
     }
 
     /**
