@@ -7,7 +7,7 @@ What it does:
 * activateScheduling: puts all the tasks and projects that were given from the user into the new created week, if the user selected to create a new week rather than importing
 
 Behaviour for which an object is accountable:
-* 
+* Controllers will be able to 
 
 Collaborators:
 * Week
