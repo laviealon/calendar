@@ -5,8 +5,10 @@ public class Controller {
         if (selection == 1) {
             LocalDate startDate = UserInterface.getStartDate();
             Week week = new Week(startDate);
-            int selectionForScheduling = UserInterface.scheduleDuty();
-            activateScheduling(week, selectionForScheduling);
+            while(true){
+                int selectionForScheduling = UserInterface.scheduleDuty();
+                activateScheduling(week, selectionForScheduling);
+            }
         } else if (selection == 2) {
             System.out.println("This feature is not currently available.");
         } else {
@@ -28,7 +30,7 @@ public class Controller {
                     projectTasksToSchedule);
             Putter.putProject(projectTasksToPut[0].name, week, projectTasksToPut);
         } else {
-
+            System.out.println("Please enter a valid option (1, 2, or 3).");
         }
 
     }

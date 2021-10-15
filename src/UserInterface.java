@@ -140,7 +140,7 @@ public class UserInterface {
         int minute = Integer.parseInt(startTime.substring(3, 5));
 
         LocalDateTime dueDateTime = LocalDateTime.of(year, month, day, hour, minute);
-        return new NonFixedTask(name, duration, dueDateTime);
+        return new NonFixedTask(name, dueDateTime, duration);
     }
 
     /**
@@ -194,7 +194,7 @@ public class UserInterface {
         LocalTime maxHoursPerTask = LocalTime.of(hours, minutes);
         NonFixedTask[] projectTasks = new NonFixedTask[Constants.FREQUENCY];
         for(int i = 0; i <= 7; i++){
-            projectTasks[i] = new NonFixedTask(name, maxHoursPerTask, dueDate);
+            projectTasks[i] = new NonFixedTask(name, dueDate, maxHoursPerTask);
         }
         return projectTasks;
     }
