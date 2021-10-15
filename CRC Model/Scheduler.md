@@ -4,7 +4,7 @@ Responsibilities
 
 What it does:
 * ScheduleTaskInWeek: Finds the best time slot in the given week and schedules the given task
-* NonFixedTask: finds the best time slots of a given day, which will be required for the ScheduleProject method
+* ScheduleTaskInDay: Finds the best time slots of a given day, which will be required for the ScheduleProject method
 * ScheduleProject: finds the best time slots in the given week in order to schedule a project
 
 Behaviour for which an object is accountable:

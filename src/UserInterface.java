@@ -73,6 +73,8 @@ public class UserInterface {
 
     /**
      * Get info from user about the FixedTask that they want to schedule and return the Task.
+     * Collect information from user about task they want to schedule and return a task according to their
+     * specifications
      *
      * @return the FixedTask that is to be put in the schedule.
      */
