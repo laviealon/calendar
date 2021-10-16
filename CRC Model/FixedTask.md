@@ -1,5 +1,6 @@
 Class name: FixedTask
 Super class: Task
+Clean Architecture Level: Entity
 
 Responsibilities
 

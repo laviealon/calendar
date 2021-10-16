@@ -1,5 +1,6 @@
 Class name: NonFixedTask
 Super class: Task
+Clean Architecture Level: Entity
 
 Responsibilities
 

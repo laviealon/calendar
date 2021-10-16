@@ -1,4 +1,5 @@
 Class name: UserInterface
+Clean Architecture Level: commandLineUI
 
 Responsibilities
 
@@ -13,7 +14,7 @@ corresponding to the project.
 
 
 Behaviour for which an object is accountable:
-* UserInterfaces must be able to receive inputs from the user about how they want to create their schedule and the type and information of the task they would like to schedule
+* UserInterfaces must be able to receive inputs from the user about how they want to create their schedule and the type and information of the task they would like to schedule and delegates the tasks to the respective methods
 
   Collaborators:
 * FixedTask

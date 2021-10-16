@@ -1,4 +1,5 @@
 Class name: Day
+Clean Architecture Level: Entity
 
 Responsibilities
 

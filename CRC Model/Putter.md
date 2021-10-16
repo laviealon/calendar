@@ -1,4 +1,5 @@
 Class name: Putter
+Clean Architecture Level: Use Case
 
 Responsibilities
 
