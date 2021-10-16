@@ -17,13 +17,16 @@ public class Scheduler {
      * @return the task with its updated time slot.
      */
     // TODO: implement this method.
-    public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
+    public static NonFixedTask ScheduleTaskInWeek(Week week, NonFixedTask task){
 //         algorithm to find best time slot in this week
-        boolean scheduled = false;
-
-//        for(Day day: week.days){
-//        }
-        return null;
+        for (Day day: week.days){
+            NonFixedTask dayTask = (NonFixedTask) ScheduleTaskInDay(day, task);
+            LocalDateTime defaultValue = LocalDateTime.of(0, 1, 1, 0, 0);
+            if(!(dayTask.startDateTime.equals(defaultValue))) {
+                return dayTask;
+            }
+         }
+        return task;
     }
 
     /*
