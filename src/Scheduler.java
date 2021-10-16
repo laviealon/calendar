@@ -16,20 +16,19 @@ public class Scheduler {
      * @param task: the Task to be scheduled.
      * @return the task with its updated time slot.
      */
-    // This is just for phase 0
-    public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
+    // TODO: implement this method.
+    //added scheduleTaskInWeek for NonFixedTask, should we create a method for splitting project into multiple
+    //non fixed tasks? - Hailey
+    public static NonFixedTask ScheduleTaskInWeek(Week week, NonFixedTask task){
 //         algorithm to find best time slot in this week
-
-
-//         boolean scheduled = false;
-//
-//        for(Day day: week.days){
-//            if (!scheduled){
-//                newTask = ScheduleTaskInDay(day, task);
-//                scheduled = true;
-//            }
-//        }
-        return (NonFixedTask) ScheduleTaskInDay(week.days[0], task);
+        for (Day day: week.days){
+            NonFixedTask dayTask = (NonFixedTask) ScheduleTaskInDay(day, task);
+            LocalDateTime defaultValue = LocalDateTime.of(0, 1, 1, 0, 0);
+            if(!(dayTask.startDateTime.equals(defaultValue))) {
+                return dayTask;
+            }
+         }
+        return task;
     }
 
     /*
