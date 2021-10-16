@@ -8,9 +8,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class TaskTest {
-
+    LocalTime duration;
+    Task task;
     @Before
     public void setUp() {
+        duration = LocalTime.of(4, 30);
+        task = new Task("Piano Practice", duration);
         }
 
     @After
@@ -19,9 +22,6 @@ public class TaskTest {
 
     @Test
     public void convertDurationDouble() {
-
-        LocalTime duration = LocalTime.of(4, 30);
-        Task task = new Task("Piano Practice", duration);
         double convertedDuration = task.convertDurationDouble();
         double expected = 4.5;
         assertEquals(expected, convertedDuration, 0.01);
@@ -29,8 +29,6 @@ public class TaskTest {
 
     @Test
     public void complete() {
-        LocalTime duration = LocalTime.of(4, 30);
-        Task task = new Task("Piano Practice", duration);
         task.complete();
         assertTrue(task.completed);
     }
