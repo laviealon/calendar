@@ -26,11 +26,11 @@ public class Scheduler {
         return null;
     }
 
-    /**
-     * Take a NonFixedTask and find the best (first available) time slot for it in a day.
-     * Set that task's start time and duration to this best time slot and return it.
-     *
-     * @param day: the Week to schedule the task into.
+    /*
+      Take a NonFixedTask and find the best (first available) time slot for it in a day.
+      Set that task's start time and duration to this best time slot and return it.
+
+      @param day: the Week to schedule the task into.
      * @param task: the Task to be scheduled.
      * @return the task with its updated time slot.
      */
@@ -69,9 +69,13 @@ public class Scheduler {
          * @return the task with its updated time slot.
          */
 
-    // TODO: implement this method.
     public static NonFixedTask[] ScheduleProject(Week week, NonFixedTask[] projectTasks){
-        return null;}
+        NonFixedTask[] updatedTasks = new NonFixedTask[7];
+        for(int i = 0; i < 7; i++){
+            updatedTasks[i] = ((NonFixedTask) ScheduleTaskInDay(week.days[i], projectTasks[i]));
+        }
+        return updatedTasks;
+    }
 
 
     public static Task ScheduleTaskInDay (Day day, Task task){
