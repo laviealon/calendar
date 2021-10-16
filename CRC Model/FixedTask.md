@@ -17,6 +17,3 @@ Behaviour for which an object is accountable:
 * Fixed Tasks do not play an active role, but their attributes are accessed and updated by many methods and classes
 
 Collaborators:
-* Week
-* UserInterface
-* Controller

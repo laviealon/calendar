@@ -9,4 +9,3 @@ Behaviour for which an object is accountable:
 * Constants contain static variables so that it can be shared and updated by all instances/mentions
 
 Collaborators:
-* UserInterface

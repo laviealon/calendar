@@ -17,5 +17,3 @@ Behaviour for which an object is accountable:
 * Non-Fixed Tasks do not play an active role, but their attributes are accessed and updated by many methods and classes
 
 Collaborators:
-* Putter
-* Scheduler
