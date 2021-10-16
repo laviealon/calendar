@@ -16,7 +16,7 @@ public class Task {
     public Task(String name, LocalTime duration){
         this.name = name;
         this.duration = duration;
-        this.startDateTime = LocalDateTime.of(0, 0, 0, 0, 0);
+        this.startDateTime = LocalDateTime.of(0, 1, 1, 0, 0);
         completed = false;
     }
 
