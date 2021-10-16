@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Project {
+public interface Project {
 
     /**
      *
@@ -17,8 +17,8 @@ public class Project {
      * the minimum number of hours user must work on project per frequency to complete it in time. If
      *  there is not enough space in their week, return 0.0.
      */
-    public static double calculateMinHours(Week week, LocalDate startDate, LocalDateTime dueDate, double totalHours,
-                                           double frequency) {
+    static double calculateMinHours(Week week, LocalDate startDate, LocalDateTime dueDate, double totalHours,
+                                    double frequency) {
         //return 0.0 if the ideal working time per day does not fit into the user's current schedule, else return
         //idealChunk
         //get the idealChunk
@@ -31,7 +31,7 @@ public class Project {
         return 0.0;
     }
 
-    public static double getIdealChunk(LocalDate startDate, LocalDateTime dueDate, double totalHours, double frequency){
+     static double getIdealChunk(LocalDate startDate, LocalDateTime dueDate, double totalHours, double frequency){
         //Get the number of days between startDate and dueDate
         long diff = ChronoUnit.DAYS.between(startDate, dueDate);
         //Calculate the number of slots needed to work on the task base on user input frequency;
@@ -42,7 +42,7 @@ public class Project {
         return Math.max(idealChunk, 0.5);
     }
 
-    public static boolean fitSchedule(Week week, double idealChunk){
+     static boolean fitSchedule(Week week, double idealChunk){
         //Check if each day has enough time for idealChunk
         for(Day n: week.days){
             //get the maximum free timeslot fpr each day in the week
@@ -55,7 +55,7 @@ public class Project {
     }
 
 
-    public static double calculateMaxHoursWeek(Week week) {
+     static double calculateMaxHoursWeek(Week week) {
         //set variable maxHour
         double maxHour = 0.0;
         //iterate through each day in the week to find the maximum free timeslot
@@ -90,7 +90,7 @@ public class Project {
      * if current max is bigger replace maxhour
      */
 
-    public static double calculateMaxHoursDay (Day day){
+     static double calculateMaxHoursDay (Day day){
         //set variable maxHour and currentMax
         double maxHour = 0.0;
         double currentMax = 0.0;

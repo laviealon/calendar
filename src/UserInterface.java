@@ -201,7 +201,7 @@ public class UserInterface {
         return projectTasks;
     }
 
-    // The unitTest gave an error saying that there was no main method in UI so I added one -Issam
+    // The unitTest gave an error saying that there was no main method in UI, so I added one     -Issam
     public static void main(String[] args) {
 
     }

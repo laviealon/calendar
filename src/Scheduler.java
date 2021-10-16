@@ -16,14 +16,20 @@ public class Scheduler {
      * @param task: the Task to be scheduled.
      * @return the task with its updated time slot.
      */
-    // TODO: implement this method.
+    // This is just for phase 0
     public static NonFixedTask ScheduleTaskInWeek(Week week, Task task){
 //         algorithm to find best time slot in this week
-        boolean scheduled = false;
 
+
+//         boolean scheduled = false;
+//
 //        for(Day day: week.days){
+//            if (!scheduled){
+//                newTask = ScheduleTaskInDay(day, task);
+//                scheduled = true;
+//            }
 //        }
-        return null;
+        return (NonFixedTask) ScheduleTaskInDay(week.days[0], task);
     }
 
     /*
