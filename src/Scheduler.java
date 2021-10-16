@@ -17,6 +17,8 @@ public class Scheduler {
      * @return the task with its updated time slot.
      */
     // TODO: implement this method.
+    //added scheduleTaskInWeek for NonFixedTask, should we create a method for splitting project into multiple
+    //non fixed tasks? - Hailey
     public static NonFixedTask ScheduleTaskInWeek(Week week, NonFixedTask task){
 //         algorithm to find best time slot in this week
         for (Day day: week.days){
