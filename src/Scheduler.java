@@ -73,13 +73,12 @@ public class Scheduler {
          */
 
     public static NonFixedTask[] ScheduleProject(Week week, NonFixedTask[] projectTasks){
-        NonFixedTask[] updatedTasks = new NonFixedTask[Constants.FREQUENCY];
+        NonFixedTask[] updatedTasks = new NonFixedTask[projectTasks.length];
         for(int i = 0; i < projectTasks.length; i++){
             updatedTasks[i] = (ScheduleTaskInWeek(week, projectTasks[i]));
         }
         return updatedTasks;
     }
-
 
     public static Task ScheduleTaskInDay (Day day, Task task){
         List<Double> time = new ArrayList<>();
