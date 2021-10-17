@@ -1,7 +1,6 @@
 
 import java.time.LocalDate;
-//import java.time.LocalDateTime;
-//import java.time.LocalTime;
+
 
 public class Week {
     public Day[] days;
@@ -39,25 +38,7 @@ public class Week {
         return s.toString();
     }
 
-//    public void setSleep(LocalTime sleepTime, LocalTime wakeTime){ // add a fixed task for sleep
-//        for (Day day:
-//             days) {
-//            if (sleepTime.compareTo(wakeTime) > 0){
-//                Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
-//                        new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth),
-//                                new LocalTime(0,0,0)),
-//                        wakeTime.getHour() + ((double) wakeTime.getMinute()) / 60.0));
-//                Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
-//                        new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth), sleepTime),
-//                        24 - sleepTime.getHour() - ((double) sleepTime.getMinute()) / 60.0));
-//            }
-//            else{
-//                Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
-//                        new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth), sleepTime,
-//                       sleepTime.getHour() - wakeTime.getHour() - (((double) sleepTime.getMinute() - (double) wakeTime.getMinute()) / 60.0))));
-//            }
-//        }
-//    }
+
 
 
 }
