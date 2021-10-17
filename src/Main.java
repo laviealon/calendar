@@ -2,6 +2,7 @@ import java.time.LocalDate;
 //import java.time.DayOfWeek;
 
 public class Main {
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void main(String[] args) {
         // Give user background on app and ask them whether they want to create
         // new week or import one from a .ics file
@@ -11,6 +12,9 @@ public class Main {
         int selectionForScheduling = UserInterface.scheduleDuty();
 //        FixedTask taskToPut = UserInterface.createFixedTask();
 //        NonFixedTask taskToSchedule = UserInterface.createNonFixedTask();
-        UserInterface.activateCreateOrImport(createOrImportChoice, startDate, selectionForScheduling);
+        Week week = Controller.activateInstantiateWeek(startDate);
+        while(true){
+            UserInterface.activateCreateOrImport(week, createOrImportChoice, startDate, selectionForScheduling);
+        }
     }
 }

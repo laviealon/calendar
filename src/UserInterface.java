@@ -1,4 +1,3 @@
-import javax.naming.ldap.Control;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.LocalDateTime;
@@ -216,13 +215,11 @@ public class UserInterface {
     }
 
     @SuppressWarnings("InfiniteLoopStatement")
-    public static void activateCreateOrImport(int selection, LocalDate startDate, int selectionForScheduling){
+    public static void activateCreateOrImport(Week week, int selection, LocalDate startDate, int selectionForScheduling){
         if (selection == 1) {
-            Week week = new Week(startDate);
-            while(true){
-                schedulingDecision(week, selectionForScheduling);
-                System.out.println(week);
-            }
+            Controller.activateInstantiateWeek(startDate);
+            schedulingDecision(week, selectionForScheduling);
+            System.out.println(week);
         } else if (selection == 2) {
             System.out.println("This feature is not currently available.");
         } else {
