@@ -73,3 +73,5 @@
 
 - While we were double checking that our classes meet the SOLID principles, we struggled to understand how general or specific responsibilities are meant to be when employing the single responsibility principle. If each class can only have one responsibility, how can it ever have more than one method. We settled on breaking up classes with multiple unrelated responsibilities, since they clearly violated this principle. We wish to understand how to define the scope of a responsibility moving forward so that we can adhere to this principle.
 
+- We would like to know if it is an issue to leave our instance attributes as public or if we must follow the convention to make them private
+
