@@ -1,5 +1,5 @@
 Class Converter
-Clean Architecture level: Controller
+Clean Architecture level: Use Case
 
 Responsibilities:
 
