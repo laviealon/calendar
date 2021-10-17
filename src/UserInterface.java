@@ -199,6 +199,12 @@ public class UserInterface {
         return projectTasks;
     }
 
+    /** Takes the selection and week that is given and finds whether what type of task is needed to be scheduled and
+     * schedules the task
+     *
+     * @param week: the week that the task will be scheduled in
+     * @param selection: the selection from the user about which type of task they would like to put
+     */
     public static void schedulingDecision(Week week, int selection){
         if (selection == 1) {
             FixedTask taskToPut = UserInterface.createFixedTask();
@@ -214,7 +220,14 @@ public class UserInterface {
         }
     }
 
-    @SuppressWarnings("InfiniteLoopStatement")
+    /** Takes the selection of the user and allows the user to create their schedule with the given week, start time,
+     * or to import an existing schedule
+     *
+     * @param week: The week in which the schedule is being made for
+     * @param selection: The selection of the user, whether they want to import or create their schedule
+     * @param startDate: The day they would like to start their schedule
+     * @param selectionForScheduling: The type of task they would like to put into their week
+     */
     public static void activateCreateOrImport(Week week, int selection, LocalDate startDate, int selectionForScheduling){
         if (selection == 1) {
             Controller.activateInstantiateWeek(startDate);
