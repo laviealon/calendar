@@ -29,13 +29,12 @@ public class Putter {
                 double h = task.startDateTime.getHour();
                 double m = (double)(task.startDateTime.getMinute())/60;
                 double startTimeD = h + m;
-                //loop through todaySchedule and mutate the value of the corresponding
+                //loop through todaySchedule and mutate the value of the corresponding key
                 int i = 0;
                 while (i < totalTaskBlock) {
                     day.todaySchedule.replace(startTimeD + 0.5*i, task.name);
                     i ++;
                 }
-                // find the start time of the task in the day
             }
         }
     }
