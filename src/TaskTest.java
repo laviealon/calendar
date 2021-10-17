@@ -20,12 +20,13 @@ public class TaskTest {
     public void tearDown() {
     }
 
-    @Test
-    public void convertDurationDouble() {
-        double convertedDuration = task.convertDurationDouble();
-        double expected = 4.5;
-        assertEquals(expected, convertedDuration, 0.01);
-    }
+    //the method got deleted - violate clean architecture
+    //@Test
+    //public void convertDurationDouble() {
+        //double convertedDuration = task.convertDurationDouble();
+        //double expected = 4.5;
+        //assertEquals(expected, convertedDuration, 0.01);
+    //}
 
     @Test
     public void complete() {
