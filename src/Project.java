@@ -7,7 +7,8 @@ import java.util.Objects;
 
 public interface Project {
 
-    /**
+    /** Calculate the minimum number of hours in a week that a user must work on their project per given frequency, so
+     * that the project can be finished before the due date
      *
      * @param week: the week the project is going to be scheduled in
      * @param startDate: The day the project will be started
@@ -31,7 +32,7 @@ public interface Project {
         return 0.0;
     }
 
-    /**
+    /** Finds the ideal chunk of time that a user must work on a project per day and returns the number of hours
      *
      * @param startDate: The day the project will be started on
      * @param dueDate: The day that the project needs to be completed by
@@ -50,7 +51,7 @@ public interface Project {
         return Math.max(idealChunk, 0.5);
     }
 
-    /**
+    /** Finds whether the given chunk of time is available in all the days in the given week
      *
      * @param week: The week that is checked to see if the idealChunk is able to fit into each day
      * @param idealChunk: The ideal chunk of time that a user must work on a project per day
@@ -69,7 +70,7 @@ public interface Project {
         return true;
     }
 
-    /**
+    /** Finds the maximum number of hours that are available in all days of the given week
      *
      * @param week: The week that is being checked to see the max timeslots that are available for all days
      * @return the maximum hours that are available for all days in the given week
@@ -88,7 +89,7 @@ public interface Project {
     }
 
 
-    /**
+    /** Calculates the maximum number of hours that are available in the given day
      *
      * @param day: The day that the max number of free timeslots are being found in
      * @return the maximum number of hours that are available in the given day
