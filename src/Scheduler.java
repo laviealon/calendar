@@ -73,9 +73,9 @@ public class Scheduler {
          */
 
     public static NonFixedTask[] ScheduleProject(Week week, NonFixedTask[] projectTasks){
-        NonFixedTask[] updatedTasks = new NonFixedTask[7];
-        for(int i = 0; i < 7; i++){
-            updatedTasks[i] = ((NonFixedTask) ScheduleTaskInDay(week.days[i], projectTasks[i]));
+        NonFixedTask[] updatedTasks = new NonFixedTask[Constants.FREQUENCY];
+        for(int i = 0; i < projectTasks.length; i++){
+            updatedTasks[i] = (ScheduleTaskInWeek(week, projectTasks[i]));
         }
         return updatedTasks;
     }
@@ -100,13 +100,13 @@ public class Scheduler {
                     //if yes, schedule the task to the start of the free duration
                     double startTime = time.get(i+1) - freeDuration;
                     int hour = (int)Math.floor(startTime);
-                    int minute = (int)(startTime - hour);
+                    int minute = (int)(startTime - hour)*60;
                     LocalTime start = LocalTime.of(hour, minute);
                     task.startDateTime = LocalDateTime.of(day.dayOfMonth, start);
                     return task;
                     //if duration is not task duration, reset freeDuration to 0.0
-                } else{ freeDuration = 0.0;}
-            }
+                }
+            } else{ freeDuration = 0.0;}
     }return task;}
 
 
