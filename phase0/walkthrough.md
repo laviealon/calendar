@@ -9,7 +9,7 @@ their recital on Sunday
     - user provided with option to schedule a single NonFixedTask or a project (potentially can select
     "what is this?" for both options)
     - user selects option to schedule project
-    - user prompted to fill in due date and total hours they want to work on it
+    - user prompted to fill in due date (including time it is due on that date), total hours they want to work on it, and name for the project
     - user inputs information
     - min hours per day calculated
     
