@@ -8,7 +8,7 @@ public class Task {
     public boolean completed;
 
     /**
-     * Constructor to be used by NonFixedTasks.
+     * Constructor to be used by NonFixedTasks, giving the task its name and duration
      *
      * @param name: name of this task
      * @param duration: duration of this task
@@ -21,7 +21,7 @@ public class Task {
     }
 
     /**
-     * Constructor to be used by FixedTasks.
+     * Constructor to be used by FixedTasks, giving the task its name, start time and duration.
      *
      * @param name: name of this task
      * @param startTime: start date and time of this task
@@ -35,7 +35,7 @@ public class Task {
     }
 
     /**
-     * Completes this task.
+     * Completes this task by modifying its 'completed' attribute
      */
     public void complete(){
         this.completed = true;
