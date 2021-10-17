@@ -73,8 +73,8 @@ public class Scheduler {
 
     public static NonFixedTask[] ScheduleProject(Week week, NonFixedTask[] projectTasks){
         NonFixedTask[] updatedTasks = new NonFixedTask[projectTasks.length];
-        for(int i = 0; i < projectTasks.length; i++){
-            updatedTasks[i] = (ScheduleTaskInWeek(week, projectTasks[i]));
+        for (int i = 0; i < projectTasks.length; i++){
+            updatedTasks[i] = (NonFixedTask) ScheduleTaskInDay(week.days[i], projectTasks[i]);
         }
         return updatedTasks;
     }

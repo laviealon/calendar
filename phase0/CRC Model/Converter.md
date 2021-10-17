@@ -1,5 +1,5 @@
 Class Converter
-Clean Architecture level: Controller
+Clean Architecture level: Use Case
 
 Responsibilities:
 
@@ -10,3 +10,8 @@ What it does:
 
 Behaviour for which an object is accountable:
 * Converters will be able to convert the types of objects to other types.
+
+Collaborators:
+* NonFixedTask
+* Putter
+* Week

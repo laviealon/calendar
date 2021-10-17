@@ -13,6 +13,11 @@ public class Day {
     public DayOfWeek dayOfWeek;
     public Map<Double, String> todaySchedule;
 
+    /**
+     *
+     * Construct a Day, giving the day its day of month, day of week and the schedule of the day
+     * @param dayOfMonth the day of month
+     */
 
     public Day(LocalDate dayOfMonth){
         this.dayOfMonth = dayOfMonth;

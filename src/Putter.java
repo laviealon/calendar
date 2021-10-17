@@ -2,8 +2,14 @@ import java.time.LocalDateTime;
 
 public class Putter {
 
-    // TODO: REQUIRED FOR WALK-THROUGH - DO NOT NEED TO HANDLE CASE WHERE TASK OVERLAPS DAY.
-
+    /**
+     * Puts a task into a week. Loops through a week to find the day that we want to schedule the task and
+     * adds the task to that day's schedule.
+     * (see README for why the word "put" is used here).
+     * The reason we schedule one hour of a task at a time is twofold: (1) this.todaySchedule comprises
+     * distinct half-hour intervals, and (2) if a task crosses over multiple days,
+     * different half-hours will need to be scheduled onto different days.
+     */
 
     public static void putTask(Week week, Task task){
         // loop through half-hours and put them into the correct day using Day.putHalfHourTask.
@@ -37,20 +43,12 @@ public class Putter {
 
 
     /**
-     * Puts a half-hour of a task into a day's .todaySchedule attribute (see README for why the word "put" is used here).
-     * The reason we schedule one hour of a task at a time is twofold: (1) this.todaySchedule comprises
-     * distinct half-hour intervals, and (2) if a task crosses over multiple days,
-     * different half-hours will need to be scheduled onto different days.
-     *
-     *taskName: the name of the task which the hour that is to be scheduled is in.
-     * startHour: the half-hour that marks the beginning of this hour of a task.
-     *                 Must be between 0 and 23.5.
+     * Puts a project into a week. A project is an array of non-fixed task.
+     * Loops through a week to find the day that we want to schedule each non-fixed task and
+     * adds the task to that day's schedule.
+     * (see README for why the word "put" is used here).
      */
-    //protected void putHalfHourTask(Week week, Day day, Double startHour, String taskName){
-        //day.todaySchedule.put(startHour, taskName);
-    //}
 
-    // TODO: REQUIRED FOR WALK-THROUGH.
     public static void putProject(String projectName, Week week, NonFixedTask[] tasks){
         for (NonFixedTask task : tasks) {
             task.name = projectName;
