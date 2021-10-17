@@ -1,15 +1,17 @@
-/**
- * Class Week contains seven days.
- * Represents a user's week and contains the data regarding all of their tasks.
- */
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+//import java.time.LocalDateTime;
+//import java.time.LocalTime;
 
 public class Week {
     public Day[] days;
 
-
+    /**
+     *
+     * Construct a week, giving the week its start date and an array of days in that week.
+     * Class Week contains seven days. It represents a user's week and contains the data regarding all of their tasks.
+     * @param startDate the start date of that week.
+     */
 
     public Week(LocalDate startDate){
         // initialize <days> to an empty array of 7 days
@@ -19,6 +21,13 @@ public class Week {
             days[i] = new Day(startDate.plusDays(i));
         }
     }
+
+
+    /**
+     * Return the string representation of a week that lists the start date of the week and the
+     * information of each day within the week (each day has a string representation of
+     * its day of week and schedule)
+     */
 
     public String toString(){
         StringBuilder s = new StringBuilder();

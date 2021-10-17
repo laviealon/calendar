@@ -30,6 +30,10 @@ public class Day {
         }
     }
 
+    /**
+     * Return the string representation of a day that lists its day of week and schedule.
+     */
+
     public String toString(){
         StringBuilder s = new StringBuilder();
         s.append("------ ").append(this.dayOfWeek).append(" ------\n");
