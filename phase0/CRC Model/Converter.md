@@ -10,3 +10,8 @@ What it does:
 
 Behaviour for which an object is accountable:
 * Converters will be able to convert the types of objects to other types.
+
+Collaborators:
+* NonFixedTask
+* Putter
+* Week
