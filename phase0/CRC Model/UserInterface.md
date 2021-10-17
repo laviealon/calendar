@@ -10,13 +10,12 @@ What it does:
 * createFixedTask: Collect information from user about task they want to schedule and return a task according to their specifications
 * createNonFixedTask: Collect information from the user about a non-fixed task that they want to schedule and returns the task
 * createProject: Get info from user about the project they want to schedule, and return an array of NonFixedTasks
-corresponding to the project.
+* schedulingDecision: Takes the selection and week that is given and finds whether what type of task is needed to be scheduled and schedules the task corresponding to the project.
+* activateCreateOrImport: Takes the selection of the user and allows the user to create their schedule with the given week, start time, or to import an existing schedule
 
 
 Behaviour for which an object is accountable:
 * UserInterfaces must be able to receive inputs from the user about how they want to create their schedule and the type and information of the task they would like to schedule and allows interface adapters to use the information given
 
   Collaborators:
-* FixedTask
-* NonFixedTask
-* Constants
+* Controller
