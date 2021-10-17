@@ -34,15 +34,6 @@ public class Task {
         completed = false;
     }
 
-    public double convertDurationDouble(){
-        double h = this.duration.getHour();
-        double m = (double)(this.duration.getMinute())/60;
-        return (h + m);
-    }
-
-
-
-
     /**
      * Completes this task.
      */
