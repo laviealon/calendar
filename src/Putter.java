@@ -6,7 +6,7 @@ public class Putter {
      * Puts a task into a week. Loops through a week to find the day that we want to schedule the task and
      * adds the task to that day's schedule.
      * (see README for why the word "put" is used here).
-     * The reason we schedule one hour of a task at a time is twofold: (1) this.todaySchedule comprises
+     * The reason we schedule one half hour of a task at a time is twofold: (1) this.todaySchedule comprises
      * distinct half-hour intervals, and (2) if a task crosses over multiple days,
      * different half-hours will need to be scheduled onto different days.
      */
@@ -31,7 +31,7 @@ public class Putter {
                 double startTimeD = h + m;
                 //loop through todaySchedule and mutate the value of the corresponding
                 int i = 0;
-                while (i < totalTaskBlock) {
+                while (i < totalTaskBlock - 1) {
                     day.todaySchedule.replace(startTimeD + 0.5*i, task.name);
                     i ++;
                 }
