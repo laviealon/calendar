@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 
 public class Controller {
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void activateCreateOrImport(int selection, LocalDate startDate, int selectionForScheduling, FixedTask taskToPut, NonFixedTask taskToSchedule){
         if (selection == 1) {
             Week week = new Week(startDate);

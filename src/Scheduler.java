@@ -39,11 +39,9 @@ public class Scheduler {
      * @param task: the Task to be scheduled.
      * @return the task with its updated time slot.
      */
-    // TODO: implement this method.
 
-//
 //    public static Task ScheduleTaskInDay(Day day, Task task){
-////         algorithm to find best time slot in this day, to be used by ScheduleProject
+//         algorithm to find best time slot in this day, to be used by ScheduleProject
 //        List<Double> time = new ArrayList<Double>();
 //        double freeDuration = 0.0;
 //        for (double key : day.todaySchedule.keySet()) {

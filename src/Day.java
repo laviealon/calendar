@@ -1,9 +1,7 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.time.LocalTime;
 
 /**
  * Each day should comprise its date, day, and a map with half-hour intervals as keys and task names as values.

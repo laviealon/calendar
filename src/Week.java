@@ -1,10 +1,12 @@
+import java.time.LocalDate;
+
 /**
  * Class Week contains seven days.
  * Represents a user's week and contains the data regarding all of their tasks.
  */
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+
+
+//import java.time.LocalDateTime;
 
 public class Week {
     public Day[] days;
@@ -18,25 +20,25 @@ public class Week {
         }
     }
 
-//    public void setSleep(LocalTime sleepTime, LocalTime wakeTime){ // add a fixed task for sleep
-//        for (Day day:
-//             days) {
-//            if (sleepTime.compareTo(wakeTime) > 0){
-//                Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
-//                        new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth),
-//                                new LocalTime(0,0,0)),
-//                        wakeTime.getHour() + ((double) wakeTime.getMinute()) / 60.0));
-//                Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
-//                        new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth), sleepTime),
-//                        24 - sleepTime.getHour() - ((double) sleepTime.getMinute()) / 60.0));
-//            }
-//            else{
-//                Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
-//                        new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth), sleepTime,
-//                       sleepTime.getHour() - wakeTime.getHour() - (((double) sleepTime.getMinute() - (double) wakeTime.getMinute()) / 60.0))));
-//            }
-//        }
-//    }
+// public void setSleep(LocalTime sleepTime, LocalTime wakeTime){ // add a fixed task for sleep
+///     for (Day day:
+//          days) {
+//         if (sleepTime.compareTo(wakeTime) > 0){
+//             Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
+//                     new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth),
+//                             new LocalTime(0,0,0)),
+//                     wakeTime.getHour() + ((double) wakeTime.getMinute()) / 60.0));
+//             Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
+//                     new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth), sleepTime),
+//                     24 - sleepTime.getHour() - ((double) sleepTime.getMinute()) / 60.0));
+//         }
+//         else{
+//             Scheduler.ScheduleTaskInWeek(this, new FixedTask("sleep",
+//                     new LocalDateTime(new LocalDate(0, 0, day.dayOfMonth), sleepTime,
+//                    sleepTime.getHour() - wakeTime.getHour() - (((double) sleepTime.getMinute() - (double) wakeTime.getMinute()) / 60.0))));
+//         }
+//     }
+// }
 
 
 }
