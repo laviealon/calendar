@@ -31,7 +31,7 @@ public class Putter {
                 double startTimeD = h + m;
                 //loop through todaySchedule and mutate the value of the corresponding
                 int i = 0;
-                while (i < totalTaskBlock - 1) {
+                while (i < totalTaskBlock) {
                     day.todaySchedule.replace(startTimeD + 0.5*i, task.name);
                     i ++;
                 }
