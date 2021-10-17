@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.time.LocalTime;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class TaskTest {
@@ -19,14 +18,6 @@ public class TaskTest {
     @After
     public void tearDown() {
     }
-
-    //the method got deleted - violate clean architecture
-    //@Test
-    //public void convertDurationDouble() {
-        //double convertedDuration = task.convertDurationDouble();
-        //double expected = 4.5;
-        //assertEquals(expected, convertedDuration, 0.01);
-    //}
 
     @Test
     public void complete() {

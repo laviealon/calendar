@@ -19,7 +19,7 @@ public class Converter {
 
     public LocalTime ConvertDoubleToLocalTime (Double time){
         int hour = (int)Math.floor(time);
-        int minute = (int)(time - hour)*60;
+        int minute = (int)((time - hour)*60);
         return LocalTime.of(hour, minute);
     }
 
