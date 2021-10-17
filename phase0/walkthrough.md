@@ -1,7 +1,7 @@
 ## 1. User inputs their fixed routine, with "piano recital" on Saturday ##
     - user meets interface, which asks user whether they want to start a new calendar or import one
     - for walk through, they start a new one - they can select the date of day 1 of their week, which they select to be "2021-10-17"
-    - they are potentially provided with a visual of their calendar
+    - they are provided with a visual of their calendar
     - user selects option to schedule FixedTasks for this week
     - user inputs a fixed task called "meeting" on "2021-10-20" and is 03:00 hours long
     - user inputs a fixed task called "class" on "2021-10-22" and is 02:30 hours long
