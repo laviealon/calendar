@@ -4,8 +4,7 @@ Clean Architecture Level: Use Case
 Responsibilities
 
 What it does:
-* putTask: puts a task into the required day of the week
-* putHalfHourTask: puts a task into the schedule for the given day
+* putTask: puts a task into a week
 * putProject: puts a project(Array of NonFixedTasks) into the required days of the week
 
 Behaviour for which an object is accountable:
