@@ -12,7 +12,3 @@ Behaviour for which an object is accountable:
 *A day must store its schedule so that it may be accessed by other methods
 
 Collaborators:
-* Week
-* Project
-* Putter
-* Scheduler

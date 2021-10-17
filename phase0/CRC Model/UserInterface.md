@@ -19,3 +19,4 @@ Behaviour for which an object is accountable:
   Collaborators:
 * FixedTask
 * NonFixedTask
+* Constants

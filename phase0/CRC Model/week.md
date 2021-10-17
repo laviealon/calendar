@@ -11,7 +11,3 @@ Behaviour for which an object is accountable:
 
 Collaborators:
 * Day
-* Scheduler
-* FixedTask
-* Project
-* Putter

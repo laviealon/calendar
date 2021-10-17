@@ -16,5 +16,4 @@ Collaborators:
 * Scheduler
 * UserInterface
 * FixedTask
-* Constants
 * NonFixedTask
