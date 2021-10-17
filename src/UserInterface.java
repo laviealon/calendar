@@ -1,11 +1,10 @@
+import javax.naming.ldap.Control;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class UserInterface {
-    // TODO: Should be able to schedule FixedTasks, NonFixedTasks, and Project
-
     /**
      * Starts the calendar program. Prints a blurb regarding how to program works, and then
      * gives user the option to either create or import their week calendar.
@@ -195,10 +194,40 @@ public class UserInterface {
         int minutes = Integer.parseInt(input.substring(3, 5));
         LocalTime maxHoursPerTask = LocalTime.of(hours, minutes);
         NonFixedTask[] projectTasks = new NonFixedTask[Constants.FREQUENCY];
-        for(int i = 0; i <= 7; i++){
+        for(int i = 0; i < 7; i++){
             projectTasks[i] = new NonFixedTask(name, dueDate, maxHoursPerTask);
         }
         return projectTasks;
+    }
+
+    public static void schedulingDecision(Week week, int selection){
+        if (selection == 1) {
+            FixedTask taskToPut = UserInterface.createFixedTask();
+            Controller.activateFixedTaskScheduling(week, taskToPut);
+        } else if (selection == 2) {
+            NonFixedTask taskToSchedule = UserInterface.createNonFixedTask();
+            Controller.activateNonFixedTaskScheduling(week, taskToSchedule);
+        } else if (selection == 3) {
+            NonFixedTask[] projectTasksToSchedule = UserInterface.createProject(week);
+            Controller.activateProjectScheduling(week, projectTasksToSchedule);
+        } else {
+            System.out.println("Please enter a valid option (1, 2, or 3).");
+        }
+    }
+
+    @SuppressWarnings("InfiniteLoopStatement")
+    public static void activateCreateOrImport(int selection, LocalDate startDate, int selectionForScheduling){
+        if (selection == 1) {
+            Week week = new Week(startDate);
+            while(true){
+                schedulingDecision(week, selectionForScheduling);
+                System.out.println(week);
+            }
+        } else if (selection == 2) {
+            System.out.println("This feature is not currently available.");
+        } else {
+            System.out.println("Please enter a valid option (1 or 2).");
+        }
     }
 
     // The unitTest gave an error saying that there was no main method in UI, so I added one     -Issam

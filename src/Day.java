@@ -20,9 +20,18 @@ public class Day {
         this.todaySchedule = new HashMap<>();
         // Set all initial half-hour blocks to the empty string, which represents
         // no task scheduled (free time)/
-        for(double i = 0.0; i < 24.0; i = i + 0.5){
+        for(double i = 0.0; i <= 23.5; i = i + 0.5){
             this.todaySchedule.put(i, "");
         }
+    }
+
+    public String toString(){
+        StringBuilder s = new StringBuilder();
+        s.append("------ ").append(this.dayOfWeek).append(" ------\n");
+        for(Double time: this.todaySchedule.keySet()){
+            s.append(time).append(": ").append(this.todaySchedule.get(time)).append("\n");
+        }
+        return(s.toString());
     }
 
 
