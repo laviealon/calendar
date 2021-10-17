@@ -60,7 +60,7 @@ public class UserInterface {
     public static int scheduleDuty(){
         Scanner reader = new Scanner(System.in);  // Create a Scanner object
         // Give user instructions
-        System.out.println("You are now able to schedule your duties. Enter:");
+        System.out.println("Schedule one or more duties. Enter:");
         System.out.println("    - 1 to schedule a task or event that is part of your week's fixed schedule");
         System.out.println("    - 2 to schedule a task or event that is flexible, which RoutOp will find the best" +
                 "time slot for based on your fixed schedule.");
