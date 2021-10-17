@@ -55,6 +55,8 @@
 
 -   Next steps for the entire group would be to take our progress so far and its complexity to gauge how much more we can add to our software. This will take us back to design and implementation.  We have not split this work between the different members as we plan to start by working on planning which we do as a group
 
+-   We would like to start implementing exceptions that are specific to this program to help our user better understand the program's failure to comply with their inputs
+
 -   Additionally, once we learn more about UIs and controllers, we can further refine our program to meet clean architecture standards
 
 ## What has worked so far with design as we started implementing code
@@ -72,4 +74,6 @@
 - Unsure whether our specifications should reflect the things we know we want to implement, or all of our ambitions for the program over the course of the semester. If we were to go with the latter option, how would we be able to properly design ideas that we are not sure if we can use, mostly because they rely on complexities we have not yet been able to add to our code.
 
 - While we were double checking that our classes meet the SOLID principles, we struggled to understand how general or specific responsibilities are meant to be when employing the single responsibility principle. If each class can only have one responsibility, how can it ever have more than one method. We settled on breaking up classes with multiple unrelated responsibilities, since they clearly violated this principle. We wish to understand how to define the scope of a responsibility moving forward so that we can adhere to this principle.
+
+- We would like to know if it is an issue to leave our instance attributes as public or if we must follow the convention to make them private
 
