@@ -2,8 +2,7 @@ import java.time.LocalDateTime;
 
 public class Putter {
 
-    // TODO: REQUIRED FOR WALKTHROUGH - DO NOT NEED TO HANDLE CASE WHERE TASK OVERLAPS DAY.
-
+    // TODO: REQUIRED FOR WALK-THROUGH - DO NOT NEED TO HANDLE CASE WHERE TASK OVERLAPS DAY.
 
 
     public static void putTask(Week week, Task task){
@@ -51,7 +50,7 @@ public class Putter {
         //day.todaySchedule.put(startHour, taskName);
     //}
 
-    // TODO: REQUIRED FOR WALKTHROUGH.
+    // TODO: REQUIRED FOR WALK-THROUGH.
     public static void putProject(String projectName, Week week, NonFixedTask[] tasks){
         for (NonFixedTask task : tasks) {
             task.name = projectName;

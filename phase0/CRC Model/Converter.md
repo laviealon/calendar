@@ -4,7 +4,9 @@ Clean Architecture level: Controller
 Responsibilities:
 
 What it does:
-* convertDurationDouble: converts the duration of the given task and converts it from type LocalTime to Double
+* ConvertDateTimeDouble: converts a LocalDateTime object and converts it into a double object
+* ConvertLocalTimeDouble: converts a LocalTime object and converts it into a double object
+* ConvertDoubleToLocalTime: converts a Double object and converts it to a LocalTime object
 
 Behaviour for which an object is accountable:
-* Converters will be able to convert from objects of type LocalTime to type Double
+* Converters will be able to convert the types of objects to other types.

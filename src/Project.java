@@ -12,7 +12,7 @@ public interface Project {
      * @param week: the week the project is going to be scheduled in
      * @param startDate:
      * @param dueDate:
-     * @param totalHours:
+     * @param totalHours
      * frequency
      * the minimum number of hours user must work on project per frequency to complete it in time. If
      *  there is not enough space in their week, return 0.0.
@@ -86,8 +86,8 @@ public interface Project {
      * if value for key is empty string add duration of key to maxHour
      * if the next key is also empty string add the duration to maxHour
      * if the next key not empty string
-     * compare current max to maxhour
-     * if current max is bigger replace maxhour
+     * compare current max to maxHour
+     * if current max is bigger replace maxHour
      */
 
      static double calculateMaxHoursDay (Day day){
