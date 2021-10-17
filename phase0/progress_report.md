@@ -55,6 +55,8 @@
 
 -   Next steps for the entire group would be to take our progress so far and its complexity to gauge how much more we can add to our software. This will take us back to design and implementation.  We have not split this work between the different members as we plan to start by working on planning which we do as a group
 
+-   We would like to start implementing exceptions that are specific to this program to help our user better understand the program's failure to comply with their inputs
+
 -   Additionally, once we learn more about UIs and controllers, we can further refine our program to meet clean architecture standards
 
 ## What has worked so far with design as we started implementing code

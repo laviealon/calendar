@@ -9,11 +9,11 @@ public class Main {
         int createOrImportChoice = UserInterface.createOrImportWeek(); // gets user input for whether they would like
         // create or import a week
         LocalDate startDate = UserInterface.getStartDate(); // gets the start date for the week assuming they create it
-        int selectionForScheduling = UserInterface.scheduleDuty();
 //        FixedTask taskToPut = UserInterface.createFixedTask();
 //        NonFixedTask taskToSchedule = UserInterface.createNonFixedTask();
         Week week = Controller.activateInstantiateWeek(startDate);
         while(true){
+            int selectionForScheduling = UserInterface.scheduleDuty();
             UserInterface.activateCreateOrImport(week, createOrImportChoice, startDate, selectionForScheduling);
         }
     }
