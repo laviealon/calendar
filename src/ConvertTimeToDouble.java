@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 
-public class Converter {
+public class ConvertTimeToDouble {
 
     /** Takes a LocalDateTime object and outputs a double object that represents the time in the LocalDateTime object.
      * The digits before the decimal point represent the hours and the digits after the decimal point represent the

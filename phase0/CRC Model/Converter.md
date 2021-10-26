@@ -1,4 +1,4 @@
-Class Converter
+Class ConvertTimeToDouble
 Clean Architecture level: Use Case
 
 Responsibilities:

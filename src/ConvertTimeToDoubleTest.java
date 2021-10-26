@@ -7,8 +7,8 @@ import java.time.LocalTime;
 
 import static org.junit.Assert.assertEquals;
 
-public class ConverterTest {
-    Converter converter = new Converter();
+public class ConvertTimeToDoubleTest {
+    ConvertTimeToDouble converter = new ConvertTimeToDouble();
     @Before
     public void setUp(){
     }
