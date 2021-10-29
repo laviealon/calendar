@@ -2,10 +2,10 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Task {
-    public String name;
-    public LocalDateTime startDateTime;
-    public LocalTime duration;
-    public boolean completed;
+    private String name;
+    private LocalDateTime startDateTime;
+    private LocalTime duration;
+    private boolean completed;
 
     /**
      * Constructor to be used by NonFixedTasks, giving the task its name and duration
@@ -39,6 +39,30 @@ public class Task {
      */
     public void complete(){
         this.completed = true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void changeName(String newName) {
+        name = newName;
+    }
+
+    public LocalDateTime getStartDateTime() {
+        return startDateTime;
+    }
+
+    public LocalTime getDuration() {
+        return duration;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void changeStartDateTime(LocalDateTime time) {
+        startDateTime = time;
     }
 
     // want to implement a "schedule" method which takes a task and a time slot and places the task

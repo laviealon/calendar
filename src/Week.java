@@ -1,9 +1,8 @@
 
 import java.time.LocalDate;
 
-
 public class Week {
-    public Day[] days;
+    private Day[] days;
 
     /**
      *
@@ -30,7 +29,7 @@ public class Week {
 
     public String toString(){
         StringBuilder s = new StringBuilder();
-        s.append("Week starting on ").append(this.days[0].dayOfWeek).append(", ").append(this.days[0].dayOfMonth).append("\n");
+        s.append("Week starting on ").append(this.days[0].getDayOfWeek()).append(", ").append(this.days[0].getDayOfMonth()).append("\n");
         s.append("-------------------------------------------\n");
         for(Day day: this.days){
             s.append(day.toString());
@@ -38,7 +37,7 @@ public class Week {
         return s.toString();
     }
 
-
-
-
+    public Day[] getDays() {
+        return days;
+    }
 }

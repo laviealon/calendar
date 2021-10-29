@@ -9,9 +9,9 @@ import java.util.Map;
  */
 
 public class Day {
-    public LocalDate dayOfMonth;
-    public DayOfWeek dayOfWeek;
-    public Map<Double, String> todaySchedule;
+    private LocalDate dayOfMonth;
+    private DayOfWeek dayOfWeek;
+    private Map<Double, String> todaySchedule;
 
     /**
      *
@@ -43,5 +43,19 @@ public class Day {
         return(s.toString());
     }
 
+    public DayOfWeek getDayOfWeek() {
+        return dayOfWeek;
+    }
 
+    public Map<Double, String> getTodaySchedule(){
+        return todaySchedule;
+    }
+
+    public LocalDate getDayOfMonth() {
+        return dayOfMonth;
+    }
+
+    public void putProject(Double time, String name) {
+        todaySchedule.replace(time, name);
+    }
 }

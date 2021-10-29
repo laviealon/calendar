@@ -22,6 +22,6 @@ public class TaskTest {
     @Test
     public void complete() {
         task.complete();
-        assertTrue(task.completed);
+        assertTrue(task.isCompleted());
     }
 }

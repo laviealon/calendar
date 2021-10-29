@@ -23,6 +23,7 @@ public class Controller {
     public static void activateProjectScheduling(Week week, NonFixedTask[] projectTasksToSchedule){
 //
         NonFixedTask[] projectTasksToPut = Scheduler.ScheduleProject(week, projectTasksToSchedule);
-        Putter.putProject(projectTasksToPut[0].name, week, projectTasksToPut);
+        Putter.putProject(projectTasksToPut[0].getName(), week, projectTasksToPut);
     }
+
 }
