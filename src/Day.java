@@ -58,4 +58,13 @@ public class Day {
     public void putProject(Double time, String name) {
         todaySchedule.replace(time, name);
     }
+
+    /**
+     * remove a task from todaySchdule (delete the task)
+     * @param day
+     * @param task
+     */
+    public void removeTask(Day day, Task task) {
+
+    }
 }

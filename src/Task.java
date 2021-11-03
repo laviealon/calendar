@@ -67,4 +67,25 @@ public class Task {
 
     // want to implement a "schedule" method which takes a task and a time slot and places the task
     // into that time slot.
+
+    // methods for updating task objects:
+
+
+    /**
+     * modify the task's start time
+     * @param task
+     * @param newStartDateTime
+     */
+    public void changeTaskStartTime (Task task, LocalDateTime newStartDateTime) {
+        task.startDateTime = newStartDateTime;
+    }
+
+    /**
+     * modify the task's duration
+     * @param task
+     * @param newDuration
+     */
+    public void changeTaskDuration(Task task, LocalTime newDuration) {
+        task.duration = newDuration;
+    }
 }
