@@ -35,32 +35,56 @@ public class Task {
     }
 
     /**
-     * Completes this task by modifying its 'completed' attribute
+     * Completes this task by modifying its 'completed' attribute to true
      */
     public void complete(){
         this.completed = true;
     }
 
+    /**
+     * Gets the name of the task
+     * @return the name of the task
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Change the name of the task
+     * @param newName: the new name that you would like to rename your task
+     */
     public void changeName(String newName) {
         name = newName;
     }
 
+    /**
+     * Get the start date and time of the task
+     * @return the start date and time of the task
+     */
     public LocalDateTime getStartDateTime() {
         return startDateTime;
     }
 
+    /**
+     * Gets the duration of the task
+     * @return the duration of the task
+     */
     public LocalTime getDuration() {
         return duration;
     }
 
+    /**
+     * Checks if the task has been completed or not
+     * @return whether the task has been completed
+     */
     public boolean isCompleted() {
         return completed;
     }
 
+    /**
+     * Changes the start date time of a task, to the given time
+     * @param time: The new start day and time of the task
+     */
     public void changeStartDateTime(LocalDateTime time) {
         startDateTime = time;
     }
