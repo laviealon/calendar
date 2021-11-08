@@ -21,13 +21,21 @@ public class Controller {
         Putter.putTask(week, taskToPut);
     }
 
+    /**
+     * Initiate scheduling and putting of a non-fixed task if the user chooses to add one to their schedule in UI
+     * @param week: the week that the task is being put into
+     * @param taskToSchedule: the NonFixedTask that is put into week
+     */
     public static void activateNonFixedTaskScheduling(Week week, NonFixedTask taskToSchedule){
         NonFixedTask NonFixedTaskToPut = Scheduler.ScheduleTaskInWeek(week, taskToSchedule);
         Putter.putTask(week, NonFixedTaskToPut);
     }
 
-    // initiate scheduling and putting of project based on user preferences
-
+    /**
+     * Initiate scheduling and putting of project based on user preferences
+     * @param week: the week that the project is being put into
+     * @param projectTasksToSchedule: the project that is put into week
+     */
     public static void activateProjectScheduling(Week week, NonFixedTask[] projectTasksToSchedule){
 //
         NonFixedTask[] projectTasksToPut = Scheduler.ScheduleProject(week, projectTasksToSchedule);

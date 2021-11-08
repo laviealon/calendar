@@ -17,6 +17,10 @@ public class NonFixedTask extends Task {
         this.dueDateTime = dueDateTime;
     }
 
+    /**
+     * Gets the due date and time of the NonFixedTask
+     * @return the date and time that the non-fixed task is due
+     */
     public LocalDateTime getDueDateTime(){
         return dueDateTime;
     }

@@ -37,6 +37,11 @@ public class Week {
         return s.toString();
     }
 
+    /**
+     * Gets the days of the week
+     * @return the days of the week in an array
+     */
+
     public Day[] getDays() {
         return days;
     }

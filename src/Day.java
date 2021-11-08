@@ -31,7 +31,7 @@ public class Day {
     }
 
     /**
-     * Return the string representation of a day that lists its day of week and schedule.
+     * @return the string representation of a day that lists its day of week and schedule.
      */
 
     public String toString(){
@@ -43,18 +43,35 @@ public class Day {
         return(s.toString());
     }
 
+    /**
+     * Gets the day of the week
+     * @return the day of the week
+     */
     public DayOfWeek getDayOfWeek() {
         return dayOfWeek;
     }
 
+    /**
+     * Gets the schedule for the day
+     * @return today's schedule
+     */
     public Map<Double, String> getTodaySchedule(){
         return todaySchedule;
     }
 
+    /**
+     * Gets the day of the month
+     * @return the day of the month
+     */
     public LocalDate getDayOfMonth() {
         return dayOfMonth;
     }
 
+    /**
+     * Puts a project into the day's schedule
+     * @param time: the time of the task to be put into the day's schedule
+     * @param name: the name of the task to be put into the day's schedule
+     */
     public void putProject(Double time, String name) {
         todaySchedule.replace(time, name);
     }

@@ -9,6 +9,9 @@ public class Putter {
      * The reason we schedule one half hour of a task at a time is twofold: (1) this.todaySchedule comprises
      * distinct half-hour intervals, and (2) if a task crosses over multiple days,
      * different half-hours will need to be scheduled onto different days.
+     *
+     * @param week: The week that the task will be put into
+     * @param task: The task that is being put into the week
      */
 
     public static void putTask(Week week, Task task){
@@ -46,6 +49,10 @@ public class Putter {
      * Loops through a week to find the day that we want to schedule each non-fixed task and
      * adds the task to that day's schedule.
      * (see README for why the word "put" is used here).
+     *
+     * @param projectName: The name of the project
+     * @param week: The week that the task is put into
+     * @param tasks: The collection of NonFixedTask's to put into the week
      */
 
     public static void putProject(String projectName, Week week, NonFixedTask[] tasks){
