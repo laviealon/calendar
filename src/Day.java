@@ -1,8 +1,7 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.ArrayList;
 
 /**
  * Each day should comprise its date, day, and a map with half-hour intervals as keys and task names as values.
@@ -12,8 +11,7 @@ import java.util.ArrayList;
 public class Day {
     private LocalDate dayOfMonth;
     private DayOfWeek dayOfWeek;
-    private Map<Double, String> todaySchedule;
-    private ArrayList<Task> todayTasks;
+    private LinkedHashMap<Double, String> todaySchedule;
 
     /**
      *
@@ -24,13 +22,12 @@ public class Day {
     public Day(LocalDate dayOfMonth){
         this.dayOfMonth = dayOfMonth;
         this.dayOfWeek = dayOfMonth.getDayOfWeek();
-        this.todaySchedule = new HashMap<>();
+        this.todaySchedule = new LinkedHashMap<>();
         // Set all initial half-hour blocks to the empty string, which represents
         // no task scheduled (free time)/
         for(double i = 0.0; i <= 23.5; i = i + 0.5){
             this.todaySchedule.put(i, "");
         }
-        this.todayTasks = new ArrayList<Task>();
     }
 
     /**
@@ -61,20 +58,6 @@ public class Day {
     public Map<Double, String> getTodaySchedule(){
         return todaySchedule;
     }
-
-    /**
-     * Gets the tasks for the day
-     * @return today's tasks
-     */
-    public ArrayList<Task> getTodayTasks(){
-        return todayTasks;
-    }
-
-    /**
-     * Adds a task that has been added to the schedule to the list of tasks for today
-     * @param task: the task that will be added to todayTasks
-     */
-    public void addTodayTasks(Task task){ todayTasks.add(task);}
 
     /**
      * Gets the day of the month
