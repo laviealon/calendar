@@ -4,7 +4,8 @@ public class Putter {
 
     /**
      * Puts a task into a week. Loops through a week to find the day that we want to schedule the task and
-     * adds the task to that day's schedule.
+     * adds the task to that day's schedule and adds that task to that day's task list if it is not currently in the
+     * list.
      * (see README for why the word "put" is used here).
      * The reason we schedule one half hour of a task at a time is twofold: (1) this.todaySchedule comprises
      * distinct half-hour intervals, and (2) if a task crosses over multiple days,
@@ -37,6 +38,9 @@ public class Putter {
                 while (i < totalTaskBlock) {
                     day.putProject(startTimeD + 0.5*i, task.getName());
                     i ++;
+                }
+                if (!day.getTodayTasks().contains(task)){
+                    day.addTodayTasks(task);
                 }
             }
         }
