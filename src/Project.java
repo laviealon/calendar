@@ -1,9 +1,11 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public interface Project {
 
@@ -116,6 +118,62 @@ public interface Project {
             }
         }
         return maxHour;
+    }
+
+    /**
+     * Get info from user about the project they want to schedule, and return an array of NonFixedTasks
+     * corresponding to the project.
+     *
+     * @return an array of unscheduled NonFixedTasks corresponding to this project.
+     */
+    static NonFixedTask[] createProject(Week week){
+        Scanner reader = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("What is the name of your project or goal?");
+        String name = reader.nextLine(); // Get user input
+        System.out.println("What date do you want to start working on this project or goal?");
+        System.out.println();
+        System.out.println("(Please enter date in format YYYY-MM-DD)");
+        String startDateStr = reader.nextLine(); // Get user input
+        int year = Integer.parseInt(startDateStr.substring(0, 4));
+        int month = Integer.parseInt(startDateStr.substring(5, 7));
+        int day = Integer.parseInt(startDateStr.substring(8, 10));
+        LocalDate startDate = LocalDate.of(year, month, day);
+        System.out.println("What date is this project or goal due by?");
+        System.out.println();
+        System.out.println("(Please enter date in format YYYY-MM-DD)");
+        String dueDateStr = reader.nextLine(); // Get user input
+        year = Integer.parseInt(dueDateStr.substring(0, 4));
+        month = Integer.parseInt(dueDateStr.substring(5, 7));
+        day = Integer.parseInt(dueDateStr.substring(8, 10));
+        System.out.println("At what time on that day is your project or goal due before?");
+        System.out.println();
+        System.out.println("(Please enter time in format HH:MM, where HH ranges from 00 to 23 and" +
+                " where MM is either 00 or 30)");
+
+        String startTime = reader.nextLine();  // Get user input
+        int hour = Integer.parseInt(startTime.substring(0, 2));
+        int minute = Integer.parseInt(startTime.substring(3, 5));
+        LocalDateTime dueDate = LocalDateTime.of(year, month, day, hour, minute);
+        System.out.println("What is the total number of hours you would like to work on this project? (round to the" +
+                " nearest 0.5)");
+        double totalHours = Double.parseDouble(reader.nextLine());
+        double minHours = Project.calculateMinHours(week, startDate, dueDate, totalHours, Constants.FREQUENCY);
+        // Create case to handle when minHours is 0.0
+        double maxHours = Project.calculateMaxHoursWeek(week);
+        System.out.println("You must work on this project at least " + minHours + " per day and at most " + maxHours +
+                " per day.");
+        System.out.println("Please enter the maximum amount of time you would like to work on this project in a given" +
+                "day. Enter a time formatted as HH:MM, where HH and MM are between that of the minimum and maximum" +
+                "shown above.");
+        String input = reader.nextLine();
+        int hours = Integer.parseInt(input.substring(0, 2));
+        int minutes = Integer.parseInt(input.substring(3, 5));
+        LocalTime maxHoursPerTask = LocalTime.of(hours, minutes);
+        NonFixedTask[] projectTasks = new NonFixedTask[Constants.FREQUENCY];
+        for(int i = 0; i <= 7; i++){
+            projectTasks[i] = new NonFixedTask(name, dueDate, maxHoursPerTask);
+        }
+        return projectTasks;
     }
 }
 

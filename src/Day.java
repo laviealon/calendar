@@ -97,10 +97,16 @@ public class Day {
 
     /**
      * remove a task from todaySchdule (delete the task)
-     * @param day
-     * @param task
+     * @param day: the day which the task is in.
+     * @param task: the task to be deleted
      */
     public void removeTask(Day day, Task task) {
+        double begin = task.getStartDateTime().getHour() + task.getStartDateTime().getMinute() / 30.0;
+        double end = begin + task.getDuration().getHour() + task.getDuration().getMinute() / 30.0;
+        for (double i = begin; i <= end; i+= 0.5)
+        {
+            day.todaySchedule.put(i, "");
+        }
 
     }
 }
