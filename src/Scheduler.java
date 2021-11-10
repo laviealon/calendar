@@ -60,6 +60,8 @@ public class Scheduler {
 //        }
 
 
+
+
         /**
          * Take an array of NonFixedTasks with placeholder time slots and find the best (first available)
          * time slot for each one in the given frequency, which is in times per week (FOR PHASE 0, ASSUME THIS IS 7).

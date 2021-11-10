@@ -45,7 +45,7 @@ public interface Project {
      static double getIdealChunk(LocalDate startDate, LocalDateTime dueDate, double totalHours, double frequency){
         //Get the number of days between startDate and dueDate
         long diff = ChronoUnit.DAYS.between(startDate, dueDate);
-        //Calculate the number of slots needed to work on the task base on user input frequency;
+        //Calculate the number of slots needed to work on the task based on user input frequency;
         double slots = diff*(frequency/7);
         //Get the ideal number of slots needed to complete the task
         double idealChunk = totalHours/slots;
