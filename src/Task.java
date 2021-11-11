@@ -97,19 +97,29 @@ public class Task {
 
     /**
      * modify the task's start time
-     * @param task
-     * @param newStartDateTime
+     * @param newStartDateTime: the new start time of the task
      */
-    public void changeTaskStartTime (Task task, LocalDateTime newStartDateTime) {
-        task.startDateTime = newStartDateTime;
+    public void changeTaskStartTime (LocalDateTime newStartDateTime) {
+        this.startDateTime = newStartDateTime;
     }
 
     /**
      * modify the task's duration
-     * @param task
-     * @param newDuration
+     * @param newDuration: the new duration of the task
      */
-    public void changeTaskDuration(Task task, LocalTime newDuration) {
-        task.duration = newDuration;
+    public void changeTaskDuration(LocalTime newDuration) {
+        this.duration = newDuration;
+    }
+
+    /**
+     *
+     */
+    public int durationToInt() {
+        int hour = this.getDuration().getHour();
+        int minute = this.getDuration().getMinute();
+        double minuteDouble = ((double)minute/60);
+        double minuteBlock = minuteDouble/0.5;
+        return hour*2 + (int) minuteBlock;
     }
 }
+
