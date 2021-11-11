@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 //import java.util.Objects;
 
-public class Scheduler {
+public class  Scheduler {
 
     /**
      * Take a NonFixedTask and find the best (first available) time slot for it in the week.
