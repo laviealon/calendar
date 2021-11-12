@@ -114,6 +114,21 @@ public class  Scheduler {
     }return task;}
 
 
+    public Task rescheduleTask(Week week, Task task, Double removeHour){
+        for(Day day: week.getDays()){
+            if (day.getDayOfMonth().isEqual(task.getStartDateTime().toLocalDate())){
+                day.removeTask(task);
+                double oldDuration = ConvertTimeToDouble.ConvertLocalTimeDouble(task.getDuration());
+                double newDuration = oldDuration - removeHour;
+                LocalTime localTimeNewDuration = ConvertTimeToDouble.ConvertDoubleToLocalTime(newDuration);
+                task.changeTaskDuration(localTimeNewDuration);
+                return ScheduleTaskInDay(day, task);
+            }
+        }
+        return task;
+    }
+
+
 
 
 }
