@@ -1,21 +1,26 @@
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Modifier {
 
-    public static double GetHoursRemoveFixedTask(Day day, FixedTask task){
+    //needs exception
+    public static double GetHoursRemoveFixedTask(Week week, FixedTask task){
         int NumberOfBlocks = task.durationToInt();
         double taskStartTime = ConvertTimeToDouble.ConvertDateTimeDouble(task.getStartDateTime());
         int i = 0;
         double overLap = 0;
+        for(Day day: week.getDays()){
+            if(day.getDayOfMonth().isEqual(task.getStartDateTime().toLocalDate())){
         while (i < NumberOfBlocks) {
             double time = taskStartTime + i;
             if (!day.getTodaySchedule().get(time).equals("")){
                 overLap ++;
             }
             i ++;}
-        return overLap/2.0;
+        return overLap/2.0;}}
+        return overLap;
 
     }
 
@@ -47,6 +52,7 @@ public class Modifier {
         }
         return MapDayTimeRemove;
     }
+
 
     //public static double GetHoursRemoveProject(Week week, double TotalHours){
 
