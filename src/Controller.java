@@ -12,6 +12,22 @@ public class Controller {
         return InstantiateWeek.instantiateWeek(startDate);
     }
 
+    public static boolean checkFixedTaskScheduling(Week week,FixedTask taskToSchedule){
+        return Checker.CheckScheduleFixedTask(week, taskToSchedule);
+    }
+
+    public static boolean checkNonFixedTaskScheduling(Week week,NonFixedTask taskToSchedule){
+        return Checker.CheckScheduleNonFixedTask(week, taskToSchedule);
+    }
+
+    public static boolean checkProjectScheduling(Week week,NonFixedTask[] projectToSchedule){
+        return Checker.CheckScheduleProject(week, projectToSchedule);
+    }
+
+    public static double timeToRemoveFixedTask(Week week, FixedTask taskToSchedule){
+        return Modifier.GetHoursRemoveFixedTask(week, taskToSchedule);
+    }
+
     /** Initiates scheduling and putting of fixed task if user chooses to add one to their schedule in UI
      *
      * @param week: the week that the task is being put into
