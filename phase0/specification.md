@@ -1,5 +1,9 @@
 #Specification
 
+user oepns application and either signs in with username and password if they have an account or signs up for an account if they don't have one yet
+
+Tasks are scheduled into weeks. A week is created by the program for the user to schedule tasks into.
+
 The user uses the app to schedule their upcoming tasks, by inputting the tasks they want to get done, and specifying details such as:
 
 1.  The amount of time tasks will take
@@ -12,4 +16,4 @@ Tasks are separated into two types, fixed and non-fixed, based on whether they h
 2.  What is the maximum amount of time they're willing to work on the project per day
 3.  When they want to complete the project by
 
-The program is supposed to take the non-fixed tasks, find an appropriate time for them (i.e. a time that does not coincide with the fixed tasks, or the sleeping schedule of the user, which they will input) such that they can be completed before the deadline, and add them to the schedule. After adding the tasks they want to complete, the user should be able to view a schedule of their day with all the fixed and non-fixed tasks they will do for the day.
+The program is supposed to take the non-fixed tasks, find an appropriate time for them (i.e. a time that does not coincide with the fixed tasks) such that they can be completed before the deadline, and add them to the schedule. After adding the tasks they want to complete, the user should be able to view a schedule of their week with all the fixed and non-fixed tasks they will do for the week.
